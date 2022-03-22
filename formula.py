@@ -33,3 +33,55 @@ my_dict3[2]='Barcelona'
 
 print(my_dict3)
 
+
+#Class is a bundle of Methods and Atributes
+
+
+class myclass(object):
+    def __init__(self,aaa,bbb):
+        self.a =aaa
+        self.b =bbb
+
+x= myclass(4.2,3)
+
+
+print(x.a,x.b)
+
+        
+#Inheritance Examples
+class Date(object):
+    def get_date(self):
+        return '2018-02-02'
+    
+class Time(Date):
+    def get_time(self):
+        return '09:00:00'
+    
+dt = Date()
+print("Get date form the Date class: ",dt.get_date())
+
+tm = Time()
+print("Get time from the time class: ", tm.get_time())
+print("Get date from time class by inheriting or calling Date class method: ", tm.get_date())
+
+
+
+class Animal(object):
+    def __init__(self, name):
+        self.name=name
+    def eat(self, food):
+        print("El %s is eating %s" %(self.name,food))
+        
+class Dog(Animal):
+    def fetch(self, thing):
+        print('%s goes after the %s' %(self.name, thing))
+        
+
+
+d = Dog('Rufo')
+
+
+print(d.eat('Perron'))
+
+
+
